@@ -13,3 +13,5 @@ colores_disponibles = ["Por categoria", "Por valor comercial"]
 # Tamanno de fuentes disponibles
 tamannos_fuente = [15, 20, 25, 30, 35, 40]
 
+#Profundidades disponibles para el arbol
+profundidades = [2,3,4]

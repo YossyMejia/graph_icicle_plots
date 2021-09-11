@@ -30,7 +30,6 @@ def original_fig(color_type, deep):
         fig = px.icicle(df, path=[px.Constant("Todas las categorias"), 'Section', 'HS2', 'HS4'],
                         values="Trade_Value", maxdepth=deep, )
     elif color_type == colores_disponibles[1]:
-        print(color_type)
         fig = px.icicle(df, path=[px.Constant("Todas las categorias"), 'Section', 'HS2', 'HS4'],
                         values="Trade_Value", maxdepth=deep, color_continuous_scale='blugrn', color='Trade_Value')
     return fig
@@ -49,7 +48,7 @@ def creacion_icicle(deep, color_type, orientation, font_size):
     # Modificar el layout del grafico, cambiando el margen, el tamanno del texto y actualizando el tipo de letra y color
     fig.update_layout(margin=dict(t=50, l=25, r=25, b=25), uniformtext=dict(minsize=font_size, mode='hide'),
                       title=dict(x=0.5), font_family="Arial", font_color="black",
-                      coloraxis_colorbar=dict(title="<b>Valor comercial</b>"), height=900)
+                      coloraxis_colorbar=dict(title="<b>Valor comercial</b>"), height=1100)
 
     # Ciclo para recorrer cada cubito del grafico (raiz, sub rama, hojas) y modificar sus datos individualmente
     fig.for_each_trace(

@@ -30,7 +30,7 @@ app.layout = html.Div(
                     id='deep-filter',
                     options=[
                         {'label': valor, 'value': valor}
-                        for valor in [2, 3, 4]
+                        for valor in profundidades
                     ],
                     value=3,
                     clearable=False,
